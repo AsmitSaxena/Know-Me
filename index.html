@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-content">
+            <!-- Photo and Name on the left side of the navigation -->
+            <div class="nav-left">
+                <img src="img/asmit.png" alt="Your Photo" class="nav-photo" id="photo">
+                <span class="nav-name">ASMIT SAXENA</span> <!-- Your Name -->
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects-experience">Projects & Experience</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- About Me Section -->
+    <section id="about">
+        <div class="about-content">
+            <!-- About Me Text Content -->
+            <div class="about-text">
+                <h1>About Me</h1>
+                <p>I am a skilled Data Analyst and Web Developer with a strong foundation in Data Structures and Algorithms (DSA). With expertise in tools like Excel, Power BI, SQL, and programming languages like Python, I specialize in turning raw data into actionable insights. My proficiency extends to key libraries such as Pandas, Numpy, Matplotlib, and Scipy, which I use to solve complex data problems efficiently.
+                    <br><br>
+                    In addition to data analysis, I am adept at building dynamic and responsive web applications, with hands-on experience in front-end and back-end development. My analytical mindset and programming skills allow me to create scalable solutions, streamline workflows, and optimize performance across a range of projects.
+                    <br><br>
+                    Driven by a passion for continuous learning and problem-solving, I thrive on tackling new challenges, whether it's developing innovative web applications or designing efficient algorithms. I aim to combine these skill sets to deliver high-impact, data-driven solutions that drive growth and improve decision-making.</p>
+            </div>
+    
+            <!-- Standing Person Photo -->
+            <div class="about-photo">
+                <img src="img/about me.png" alt="Standing Person Photo">
+            </div>
+        </div>
+    </section>
+    
+    <section id="projects-experience">
+        <h2>Projects & Experience</h2>
+        
+        <div class="cards-container">
+            <!-- Project Card with Background Image and Clickable Box -->
+            <div class="card project-card" onclick="toggleDescription(this)" style="background-image: url('img/Madhav\ Ecommerce\ Dashboard.jpg');">
+                <div class="project-info">
+                    <h3>Sales Dashboard</h3>
+                </div>
+                <div class="project-description">
+                    <p>GitHub Link : <a href="https://github.com/AsmitSaxena/Madhav-Ecommerce-Sales-Dashboard" target="_blank" rel="noopener noreferrer">https://github.com/AsmitSaxena/Madhav-Ecommerce-Sales-Dashboard</a></p>
+                </div>
+            </div>
+    
+            <!-- Repeat for each project -->
+            <div class="card project-card" onclick="toggleDescription(this)" style="background-image: url('img/Super\ Store\ Sales.jpg');">
+                <div class="project-info">
+                    <h3>Sales Dashboard</h3>
+                </div>
+                <div class="project-description">
+                    <p>GitHub Link : <a href="https://github.com/AsmitSaxena/SuperStore-Sales-Dashboard" target="_blank" rel="noopener noreferrer">https://github.com/AsmitSaxena/SuperStore-Sales-Dashboard</a></p>
+                </div>
+            </div>
+    
+            <!-- Add more project cards in a similar manner -->
+
+            <div class="card project-card" onclick="toggleDescription(this)" style="background-image: url('img/Vrinda\ Store.jpg');">
+                <div class="project-info">
+                    <h3>Sales Dashboard</h3>
+                </div>
+                <div class="project-description">
+                    <p>GitHub Link : <a href="https://github.com/AsmitSaxena/Vrinda-Store-Data-Analysis" target="_blank" rel="noopener noreferrer">https://github.com/AsmitSaxena/Vrinda-Store-Data-Analysis</a> </p>
+                </div>
+            </div>
+
+            <div class="card project-card" onclick="toggleDescription(this)" style="background-image: url('img/3D\ Music\ Player.jpg');">
+                <div class="project-info">
+                    <h3>Music Player</h3>
+                </div>
+                <div class="project-description">
+                    <p>Deploy Link : <a href="https://asmitsaxena.github.io/3d-music-card/" target="_blank" rel="noopener noreferrer">Music Player</a> </p>
+                </div>
+            </div>
+            
+
+            <div class="card project-card" onclick="toggleDescription(this)" style="background-image: url('img/Joke\ Website.jpg');">
+                <div class="project-info">
+                    <h3>Joke Website</h3>
+                </div>
+                <div class="project-description">
+                    <p>Deploy Link : <a href="https://asmitsaxena.github.io/Random-JokesApp/" target="_blank" rel="noopener noreferrer">Joke Website</a></p>
+                </div>
+            </div>
+            
+
+            <div class="card project-card" onclick="toggleDescription(this)" style="background-image: url('img/Text\ To\ Speech.jpg');">
+                <div class="project-info">
+                    <h3>Text-To-Speech Converter</h3>
+                </div>
+                <div class="project-description">
+                    <p>Deploy Link : <a href="https://asmitsaxena.github.io/Text_to_Voice_Converter/" target="_blank" rel="noopener noreferrer">Text-To-Speech Converter</a></p>
+                </div>
+            </div>
+            
+
+            <div class="card project-card" onclick="toggleDescription(this)" style="background-image: url('img/Portfolio.jpg');">
+                <div class="project-info">
+                    <h3>Portfolio Card</h3>
+                </div>
+                <div class="project-description">
+                    <p>Deploy Link : <a href="https://asmitsaxena.github.io/Portfolio_Card/" target="_blank" rel="noopener noreferrer">Portfolio Card</a></p>
+                </div>
+            </div>
+    
+            <div class="card experience-card" onclick="toggleDescription(this)" style="background-image: url('img/ineuron.jpg');">
+                <div class="project-info">
+                    <h3>iNeuron</h3>
+                </div>
+                <div class="project-description">
+                    <p><a href="https://github.com/AsmitSaxena/iNeuron" target="_blank" rel="noopener noreferrer">Certificates</a> 
+                    </p>
+                </div>
+            </div>
+            
+
+            <div class="card experience-card" onclick="toggleDescription(this)" style="background-image: url('img/codeclause.png');">
+                <div class="project-info">
+                    <h3>Codeclause</h3>
+                </div>
+                <div class="project-description">
+                    <p><a href="https://github.com/AsmitSaxena/Codeclause" target="_blank" rel="noopener noreferrer">Certificates</a></p>
+                </div>
+            </div>
+    
+        </div>
+    </section>
+
+
+    <section id="services">
+        <h2>Services I Provide</h2>
+        <div class="services-container">
+          <!-- Service 1: Portfolio Help -->
+          <div class="service-card">
+            <h3>Let me help you build your Portfolio</h3>
+            <p>I can assist in creating a professional portfolio that highlights your skills and projects to potential employers or clients.</p>
+          </div>
+      
+          <!-- Service 2: Business Analytics -->
+          <div class="service-card">
+            <h3>Let me help take your business to the sky (Business Analytics)</h3>
+            <p>With powerful business analytics, I can help you drive growth and make informed decisions for your business success.</p>
+          </div>
+      
+          <!-- Service 3: Website Development for Business -->
+          <div class="service-card">
+            <h3>Website for Your Business</h3>
+            <p>I offer professional website development services tailored to meet your business needs and reach your target audience.</p>
+          </div>
+        </div>
+      </section>
+      
+
+    
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form id="contactForm">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required placeholder="Your Name">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="Your Email">
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required placeholder="Your Message"></textarea>
+          </div>
+          <button type="submit">Send Message</button>
+        </form>
+        <div id="formStatus"></div> <!-- This will display the status after submission -->
+      </section>
+      
+    <script src="script.js"></script>
+</body>
+</html>

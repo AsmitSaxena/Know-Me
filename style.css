@@ -1,0 +1,461 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Prevent horizontal scrolling when zooming */
+    padding-top: 60px; /* Adjust the value based on the height of your navbar */
+
+}
+
+/* Navigation Styling */
+nav {
+    background-color: #333;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed; /* This fixes the navbar at the top */
+    top: 0;
+    width: 100%; /* Ensures the navbar spans the full width */
+    z-index: 1000; /* Keeps the navbar above other content */
+}
+
+.nav-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.nav-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px; /* Space between photo and name */
+    transition: transform 0.5s ease, top 0.5s ease, left 0.5s ease;
+    position: relative;
+    z-index : 10;
+}
+
+.nav-name {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.nav-photo.zoomed {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(5);
+    z-index: 100;
+}
+
+/* Navigation links */
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.nav-links li {
+    margin: 0 30px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #ffcc00;
+    transform: scale(1.1);
+}
+
+.nav-links li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #ffcc00;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease;
+}
+
+.nav-links li a:hover::after {
+    width: 100%;
+}
+
+
+/* About Section */
+/* About Section */
+#about {
+    background-color: #f4f4f4;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    gap: 50px;
+}
+
+/* About Me Text with Animation */
+.about-text {
+    flex: 1;
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: fadeInLeft 2s forwards; /* Animation to make text slide in */
+}
+
+.about-text h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+/* Keyframes for About Me text animation */
+@keyframes fadeInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0); /* Slide text in from the left */
+    }
+}
+
+/* Standing Person Photo */
+.about-photo {
+    flex: 0 1 400px;
+}
+
+.about-photo img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(197, 40, 40, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.about-photo img:hover {
+    transform: scale(1.2); /* Slight zoom-in effect on hover */
+}
+
+/* Projects and Experience Section */
+#projects-experience {
+    padding: 50px;
+    background-color: #eeeeee;
+    text-align: center;
+}
+
+#projects-experience h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    position: relative;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+/* Cards Container */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+/* Card Styling */
+.card {
+    background-color: white;
+    width: calc(33% - 20px);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideUp 0.7s forwards ease-in-out;
+    animation-delay: calc(0.1s * var(--delay));
+}
+
+/* Adjust for Smaller Screens */
+@media screen and (max-width: 768px) {
+    .card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .card {
+        width: 100%;
+    }
+}
+
+/* Hover Effect */
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Project Card Specific Styles */
+.project-card {
+    border-left: 5px solid #3498db;
+}
+
+/* Experience Card Specific Styles */
+.experience-card {
+    border-left: 5px solid #e67e22;
+}
+
+/* Keyframes for Animations */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Delays for Animation Timing */
+.card:nth-child(1) { --delay: 1; }
+.card:nth-child(2) { --delay: 2; }
+.card:nth-child(3) { --delay: 3; }
+.card:nth-child(4) { --delay: 4; }
+.card:nth-child(5) { --delay: 5; }
+.card:nth-child(6) { --delay: 6; }
+.card:nth-child(7) { --delay: 7; }
+.card:nth-child(8) { --delay: 8; }
+.card:nth-child(9) { --delay: 9; }
+
+
+/* Card Styling */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.card {
+    background-size: cover;
+    background-position: center;
+    width: calc(33% - 20px);
+    height: 250px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Project Info Box */
+.project-info {
+    background-color: white;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: 1;
+}
+
+.project-info h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.card:hover .project-info {
+    background-color: rgba(255, 255, 255, 0.8);
+    transform: translateY(-5px);
+}
+
+/* Project Description (Hidden Initially, Show on Hover) */
+.project-description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+    opacity: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: opacity 0.5s ease;
+    overflow-y: auto;
+    
+}
+
+.card:hover .project-description {
+    opacity: 1;
+}
+
+.project-description p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 768px) {
+    .card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .card {
+        width: 100%;
+        height: 200px;
+    }
+
+    .project-description {
+        padding: 15px;
+    }
+}
+
+
+/* Hover Effect on Cards */
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Services Section */
+#services {
+    padding: 50px 0;
+    background-color: #f9f9f9; /* Light background for contrast */
+    text-align: center;
+  }
+  
+  #services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  .services-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .service-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 30%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .service-card h3 {
+    font-size: 1.8rem;
+    color: #555;
+    margin-bottom: 15px;
+  }
+  
+  .service-card p {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  /* Media Query for responsiveness */
+  @media screen and (max-width: 768px) {
+    .service-card {
+      width: 100%;
+    }
+  }
+  
+
+
+/* Form Styling */
+#contact {
+    padding: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #218838;
+  }
+  
+  #formStatus {
+    margin-top: 15px;
+    font-weight: bold;
+  }
+  
